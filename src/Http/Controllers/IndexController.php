@@ -1,6 +1,6 @@
 <?php
 
-namespace FlashVps\Docs\Http\Controllers;
+namespace VendorName\Skeleton\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
