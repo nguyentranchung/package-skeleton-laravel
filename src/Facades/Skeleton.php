@@ -1,16 +1,16 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace VendorName\Skeleton\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
  * @see \VendorName\Skeleton\Skeleton
  */
-class SkeletonFacade extends Facade
+class Skeleton extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'skeleton';
+        return \VendorName\Skeleton\Skeleton::class;
     }
 }

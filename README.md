@@ -11,13 +11,14 @@ composer require :vendor_slug/:package_slug
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --provider="VendorName\Skeleton\SkeletonServiceProvider" --tag=":package_slug-migrations"
+php artisan vendor:publish --tag=":package_slug-migrations"
 php artisan migrate
 ```
 
 You can publish the config file with:
+
 ```bash
-php artisan vendor:publish --provider="VendorName\Skeleton\SkeletonServiceProvider" --tag=":package_slug-config"
+php artisan vendor:publish --tag=":package_slug-config"
 ```
 
 This is the contents of the published config file:
@@ -27,11 +28,17 @@ return [
 ];
 ```
 
+Optionally, you can publish the views using
+
+```bash
+php artisan vendor:publish --tag=":package_slug-views"
+```
+
 ## Usage
 
 ```php
-$skeleton = new VendorName\Skeleton();
-echo $skeleton->echoPhrase('Hello, VendorName!');
+$variable = new VendorName\Skeleton();
+echo $variable->echoPhrase('Hello, VendorName!');
 ```
 
 ## Testing
@@ -46,7 +53,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Contributing
 
-Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Security Vulnerabilities
 
